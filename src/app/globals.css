@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-quicksand: var(--font-quicksand);
+  --font-playfair: var(--font-playfair);
 }
 
 @theme inline {
@@ -22,5 +24,52 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-quicksand);
+  font-weight: 400;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.font-quicksand {
+  font-family: var(--font-quicksand);
+}
+
+.font-playfair {
+  font-family: var(--font-playfair);
+}
+
+.my-header-class {
+  padding: 20px 25px !important; 
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  letter-spacing: 1px !important;
+  text-transform: uppercase !important;
+  background-color: rgb(242, 243, 247) !important;
+}
+
+.my-header-class {
+  @apply transition-colors duration-300; /* biar ada animasi saat aktif */
+}
+
+.rc-collapse-item-active > .rc-collapse-header.my-header-class {
+  background-color: #2c98f0 !important;
+  color: white !important;
+}
+
+.rc-collapse-content > .rc-collapse-body {
+  padding: 1.5em;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #2c98f0 !important; /* bisa disesuaikan */
+}
+
+.swiper-pagination-bullet {
+  background-color: #d1d5db !important; /* abu-abu Tailwind: gray-300 */
+  opacity: 1; /* agar tidak transparan */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #2c98f0 !important; /* biru Tailwind: blue-600 */
 }
