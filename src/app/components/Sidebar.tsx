@@ -5,7 +5,7 @@ export default function Sidebar() {
     const year = date.getFullYear();
 
     return (
-        <aside className="hidden md:block w-[350px] fixed top-0 left-0 h-screen pt-[3em] pb-[40px] overflow-y-auto bg-[#f2f3f7]">
+        <aside className="hidden lg:block w-[350px] fixed top-0 left-0 h-screen pt-[3em] pb-[40px] overflow-y-auto bg-[#f2f3f7]">
             <div className="flex flex-col items-center pb-[2em]">
                 <div className='pb-[30px]'>
                     <div className="relative w-[150px] h-[150px] rounded-full overflow-hidden bg-red-200">

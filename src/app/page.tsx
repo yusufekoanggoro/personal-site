@@ -73,7 +73,7 @@ export default function Home() {
     return (
         <div className="flex">
             <Sidebar />
-            <main className="flex-1 ml-0 md:ml-[350px] overflow-hidden">
+            <main className="flex-1 ml-0 lg:ml-[350px] overflow-hidden">
                 <section className="relative h-screen bg-[url('/images/wallpaperflare.com_wallpaper.jpg')] bg-cover bg-center bg-no-repeat flex items-center p-[2.5em]">
                     <div className='flex flex-col'>
                         <AnimatePresence mode="wait">
@@ -434,7 +434,7 @@ export default function Home() {
                     </div>
                 </section>
 
-                <section className='relative flex flex-col p-[2.5em]'>
+                <section className='relative flex flex-col p-[2.5em] '>
                     <div ref={ref}>
                         {inView && (
                             <AnimatePresence mode="wait">
@@ -449,7 +449,7 @@ export default function Home() {
                                     <h2 className='font-playfair text-[18px] mb-[4em] font-bold uppercase tracking-[5px] leading-[1.8]'>Get in Touch</h2>
                                 
 
-                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                    <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-4">
                                         {[
                                             {
                                                 icon: <Mail className="text-blue-600" />,
@@ -496,7 +496,7 @@ export default function Home() {
                                                 <div className="mt-1">{icon}</div>
                                                 <div>
                                                 <p>{title}</p>
-                                                <p>{value}</p>
+                                                <p className='break-words'>{value}</p>
                                                 </div>
                                             </Wrapper>
                                             );
