@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^5.11.6",
     "@ramonak/react-progress-bar": "^5.4.0",
     "framer-motion": "^12.23.3",
     "lucide-react": "^0.525.0",
