@@ -190,11 +190,11 @@ export default function Home() {
                                 
                                     <Collapse defaultActiveKey={0} accordion={true}>
                                         <Panel header="Indraprasta PGRI University (2020-2024)" headerClass="my-header-class">
-                                            <p>Completed a final project research on the Decision Support System for Employee Recruitment at PT Telkom, implementing the AHP method to enhance objectivity and efficiency in the selection process, using Java (NetBeans) and MySQL as supporting technologies.</p>
+                                            <p className='text-justify'>Completed a final project research on the Decision Support System for Employee Recruitment at PT Telkom, implementing the AHP method to enhance objectivity and efficiency in the selection process, using Java (NetBeans) and MySQL as supporting technologies.</p>
                                             <p><strong>GPA: 3.5</strong></p>
                                         </Panel>
                                         <Panel header="Vocational High School 24 Jakarta (2016-2019)" headerClass="my-header-class">
-                                            I studied and explored programming, software development, and database management. Proficient in algorithms, data structures, and developing web and desktop applications, with experience in software development projects both individually and in teams.
+                                            <p className='text-justify'>I studied and explored programming, software development, and database management. Proficient in algorithms, data structures, and developing web and desktop applications, with experience in software development projects both individually and in teams.</p>
                                         </Panel>
                                     </Collapse>
                                 </motion.div>
