@@ -6,18 +6,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-import Collapse, { Panel, CollapseProps } from 'rc-collapse';
+import Collapse, { Panel } from 'rc-collapse';
 import 'rc-collapse/assets/index.css'; // Wajib agar tampilannya berfungsi
 import { useInView } from "react-intersection-observer";
 
 // import CertificationSlider from './components/CertificationSlider';
 import { Mail, Phone, Linkedin, MapPin, Pencil, Github } from 'lucide-react';
-import { Link, Element , Events, animateScroll as scroll, scroller } from 'react-scroll';
+import { Link } from 'react-scroll';
 
 export default function Home() {
     const contents = [
-        <div>
-            <h1 className='text-[60px] leading-[1.3] font-bold font-playfair'>Hi!<br />I'm Yusuf</h1>
+        <div key={0}>
+            <h1 className='text-[60px] leading-[1.3] font-bold font-playfair'>Hi!<br />I&apos;m Yusuf</h1>
             <h2 className='text-[18px] mb-[30px] leading-[1.5] font-light'>Built with Next.js & Tailwind CSS — by Yusuf</h2>
             <p className='text-[16px]'>
                 <a 
@@ -31,25 +31,25 @@ export default function Home() {
                 >Download Resume 📥</a>
             </p>
         </div>,
-        <h1 className='text-[60px] leading-[1.3] font-bold font-playfair'>I am <br />a Backend Engineer</h1>
+        <h1 key={1} className='text-[60px] leading-[1.3] font-bold font-playfair'>I am <br />a Backend Engineer</h1>
     ];
 
-    const certifications = [
-        {
-            title: 'AWS Certified Solutions Architect',
-            issuer: 'Amazon Web Services',
-            date: 'August 2023',
-            link: 'https://example.com/aws-certificate',
-            imageUrl: '/Certificate-Yusuf-Eko-Anggoro.jpg',
-        },
-        {
-            title: 'AWS Certified Solutions Architect',
-            issuer: 'Amazon Web Services',
-            date: 'August 2023',
-            link: 'https://example.com/aws-certificate',
-            imageUrl: '/Certificate-Yusuf-Eko-Anggoro.jpg',
-        },
-    ];
+    // const certifications = [
+    //     {
+    //         title: 'AWS Certified Solutions Architect',
+    //         issuer: 'Amazon Web Services',
+    //         date: 'August 2023',
+    //         link: 'https://example.com/aws-certificate',
+    //         imageUrl: '/Certificate-Yusuf-Eko-Anggoro.jpg',
+    //     },
+    //     {
+    //         title: 'AWS Certified Solutions Architect',
+    //         issuer: 'Amazon Web Services',
+    //         date: 'August 2023',
+    //         link: 'https://example.com/aws-certificate',
+    //         imageUrl: '/Certificate-Yusuf-Eko-Anggoro.jpg',
+    //     },
+    // ];
 
     const { ref, inView } = useInView({
         triggerOnce: true, // hanya sekali animasi saat pertama muncul
@@ -59,12 +59,15 @@ export default function Home() {
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setIndex((prevIndex) => (prevIndex + 1) % contents .length);
-        }, 5000); // Ganti setiap 5 detik
+        if (contents.length > 0) {
+            const interval = setInterval(() => {
+                setIndex((prevIndex) => (prevIndex + 1) % contents .length);
+            }, 5000); // Ganti setiap 5 detik
 
-        return () => clearInterval(interval); // Bersihkan interval saat komponen unmount
-    }, []);
+            return () => clearInterval(interval); // Bersihkan interval saat komponen unmount
+        }
+
+    }, [contents.length]);
     
 
     return (
@@ -118,7 +121,7 @@ export default function Home() {
                                     <span className='text-[10px] font-medium uppercase tracking-[5px] mb-[15px]'>About</span>
                                     <h2 className='font-playfair text-[18px] mb-[4em] font-bold uppercase tracking-[5px] leading-[1.8]'>Get to know me better</h2>
                                     <p className='text-justify'>
-                                        I'm <strong>Yusuf Eko Anggoro</strong>, a <strong>Backend Developer</strong> with over <strong>5 years of experience</strong> developing and optimizing <strong> microservices architecture</strong>. I specialize in <strong>Node.js</strong>, <strong>TypeScript</strong>, and <strong>Golang</strong> with a focus on <strong>performance</strong>, <strong>reliability</strong>, and <strong>maintainability</strong>. Passionate about <strong>problem-solving</strong> and continuously learning the latest technologies to drive impactful solutions.
+                                        I&apos;m <strong>Yusuf Eko Anggoro</strong>, a <strong>Backend Developer</strong> with over <strong>5 years of experience</strong> developing and optimizing <strong> microservices architecture</strong>. I specialize in <strong>Node.js</strong>, <strong>TypeScript</strong>, and <strong>Golang</strong> with a focus on <strong>performance</strong>, <strong>reliability</strong>, and <strong>maintainability</strong>. Passionate about <strong>problem-solving</strong> and continuously learning the latest technologies to drive impactful solutions.
                                     </p>
                                 </motion.div>
                             </AnimatePresence>
@@ -139,7 +142,7 @@ export default function Home() {
                                         viewport={{ once: true, amount: 0.3 }}
                                     >
                                         <span className='text-[10px] font-medium uppercase tracking-[5px] mb-[15px]'>Experience</span>
-                                        <h2 className='font-playfair text-[18px] mb-[4em] font-bold uppercase tracking-[5px] leading-[1.8]'>What I've done so far</h2>
+                                        <h2 className='font-playfair text-[18px] mb-[4em] font-bold uppercase tracking-[5px] leading-[1.8]'>What I&apos;ve done so far</h2>
                                         <VerticalTimeline lineColor="#f2f3f7">
                                             <VerticalTimelineElement
                                                 className="vertical-timeline-element--work"
