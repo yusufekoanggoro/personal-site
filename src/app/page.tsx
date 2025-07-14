@@ -466,13 +466,13 @@ export default function Home() {
                                             {
                                                 icon: <Linkedin className="text-blue-800" />,
                                                 title: "LinkedIn",
-                                                value: "linkedin.com/in/yousufe24",
+                                                value: "yousufe24",
                                                 href: "https://linkedin.com/in/yousufe24",
                                             },
                                             {
                                                 icon: <Github className="text-black" />,
                                                 title: "GitHub",
-                                                value: "https://github.com/yusufekoanggoro",
+                                                value: "yusufekoanggoro",
                                                 href: "https://github.com/yusufekoanggoro",
                                             },
                                             {
